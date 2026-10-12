@@ -1,0 +1,2518 @@
+{
+ "description": "IEEE 123-node feeder topology from the benchmark data files. 123 buses appear in the line data; the benchmark voltage profile has 130 points (adds substation 150, node 610, 4 regulator terminals RG1-RG4 and transformer terminal XF1); 3 more nodes (251, 350, 451) only exist as ends of open tie switches. v123Group = position in V123 (columns 3*g-2 .. 3*g).",
+ "nominalKvLL": 4.16,
+ "nodes": [
+  {
+   "id": "150",
+   "phases": "abc",
+   "v123Group": 1,
+   "benchmarkVoltagePu": {
+    "a": 1.0,
+    "b": 1.0,
+    "c": 1.0
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "RG1",
+   "phases": "abc",
+   "v123Group": 2,
+   "benchmarkVoltagePu": {
+    "a": 1.0437,
+    "b": 1.0438,
+    "c": 1.0438
+   },
+   "kind": "regulator-terminal"
+  },
+  {
+   "id": "149",
+   "phases": "abc",
+   "v123Group": 3,
+   "benchmarkVoltagePu": {
+    "a": 1.0436,
+    "b": 1.0437,
+    "c": 1.0436
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "1",
+   "phases": "abc",
+   "v123Group": 4,
+   "benchmarkVoltagePu": {
+    "a": 1.0311,
+    "b": 1.0412,
+    "c": 1.0348
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "2",
+   "phases": "b",
+   "v123Group": 5,
+   "benchmarkVoltagePu": {
+    "b": 1.041
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "3",
+   "phases": "c",
+   "v123Group": 6,
+   "benchmarkVoltagePu": {
+    "c": 1.0331
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "4",
+   "phases": "c",
+   "v123Group": 7,
+   "benchmarkVoltagePu": {
+    "c": 1.0326
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PR",
+   "kind": "bus"
+  },
+  {
+   "id": "5",
+   "phases": "c",
+   "v123Group": 8,
+   "benchmarkVoltagePu": {
+    "c": 1.0318
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-I",
+   "kind": "bus"
+  },
+  {
+   "id": "6",
+   "phases": "c",
+   "v123Group": 9,
+   "benchmarkVoltagePu": {
+    "c": 1.0311
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "7",
+   "phases": "abc",
+   "v123Group": 10,
+   "benchmarkVoltagePu": {
+    "a": 1.0218,
+    "b": 1.0395,
+    "c": 1.0291
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "8",
+   "phases": "abc",
+   "v123Group": 11,
+   "benchmarkVoltagePu": {
+    "a": 1.0158,
+    "b": 1.0382,
+    "c": 1.0253
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "12",
+   "phases": "b",
+   "v123Group": 12,
+   "benchmarkVoltagePu": {
+    "b": 1.0379
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "13",
+   "phases": "abc",
+   "v123Group": 13,
+   "benchmarkVoltagePu": {
+    "a": 1.0079,
+    "b": 1.036,
+    "c": 1.0196
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "152",
+   "phases": "abc",
+   "v123Group": 14,
+   "benchmarkVoltagePu": {
+    "a": 1.0078,
+    "b": 1.036,
+    "c": 1.0196
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "52",
+   "phases": "abc",
+   "v123Group": 15,
+   "benchmarkVoltagePu": {
+    "a": 1.0018,
+    "b": 1.0348,
+    "c": 1.0164
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "53",
+   "phases": "abc",
+   "v123Group": 16,
+   "benchmarkVoltagePu": {
+    "a": 0.9991,
+    "b": 1.034,
+    "c": 1.0148
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "54",
+   "phases": "abc",
+   "v123Group": 17,
+   "benchmarkVoltagePu": {
+    "a": 0.9976,
+    "b": 1.0334,
+    "c": 1.0138
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "55",
+   "phases": "abc",
+   "v123Group": 18,
+   "benchmarkVoltagePu": {
+    "a": 0.9974,
+    "b": 1.0334,
+    "c": 1.0139
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "56",
+   "phases": "abc",
+   "v123Group": 19,
+   "benchmarkVoltagePu": {
+    "a": 0.9974,
+    "b": 1.0332,
+    "c": 1.014
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "57",
+   "phases": "abc",
+   "v123Group": 20,
+   "benchmarkVoltagePu": {
+    "a": 0.9945,
+    "b": 1.0306,
+    "c": 1.0113
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "58",
+   "phases": "b",
+   "v123Group": 21,
+   "benchmarkVoltagePu": {
+    "b": 1.03
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-I",
+   "kind": "bus"
+  },
+  {
+   "id": "59",
+   "phases": "b",
+   "v123Group": 22,
+   "benchmarkVoltagePu": {
+    "b": 1.0296
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "60",
+   "phases": "abc",
+   "v123Group": 23,
+   "benchmarkVoltagePu": {
+    "a": 0.988,
+    "b": 1.0256,
+    "c": 1.0052
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "160",
+   "phases": "abc",
+   "v123Group": 24,
+   "benchmarkVoltagePu": {
+    "a": 0.988,
+    "b": 1.0256,
+    "c": 1.0052
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "RG4",
+   "phases": "abc",
+   "v123Group": 25,
+   "benchmarkVoltagePu": {
+    "a": 1.0374,
+    "b": 1.032,
+    "c": 1.0366
+   },
+   "kind": "regulator-terminal"
+  },
+  {
+   "id": "67",
+   "phases": "abc",
+   "v123Group": 26,
+   "benchmarkVoltagePu": {
+    "a": 1.0355,
+    "b": 1.0311,
+    "c": 1.0345
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "68",
+   "phases": "a",
+   "v123Group": 27,
+   "benchmarkVoltagePu": {
+    "a": 1.034
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "69",
+   "phases": "a",
+   "v123Group": 28,
+   "benchmarkVoltagePu": {
+    "a": 1.0322
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "70",
+   "phases": "a",
+   "v123Group": 29,
+   "benchmarkVoltagePu": {
+    "a": 1.031
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "71",
+   "phases": "a",
+   "v123Group": 30,
+   "benchmarkVoltagePu": {
+    "a": 1.0303
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "72",
+   "phases": "abc",
+   "v123Group": 31,
+   "benchmarkVoltagePu": {
+    "a": 1.0359,
+    "b": 1.0302,
+    "c": 1.0343
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "73",
+   "phases": "c",
+   "v123Group": 32,
+   "benchmarkVoltagePu": {
+    "c": 1.0321
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "74",
+   "phases": "c",
+   "v123Group": 33,
+   "benchmarkVoltagePu": {
+    "c": 1.0303
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "75",
+   "phases": "c",
+   "v123Group": 34,
+   "benchmarkVoltagePu": {
+    "c": 1.0293
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "76",
+   "phases": "abc",
+   "v123Group": 35,
+   "benchmarkVoltagePu": {
+    "a": 1.0358,
+    "b": 1.0297,
+    "c": 1.0349
+   },
+   "loadKw": 245.0,
+   "loadKvar": 180.0,
+   "loadModel": "D-I",
+   "kind": "bus"
+  },
+  {
+   "id": "77",
+   "phases": "abc",
+   "v123Group": 36,
+   "benchmarkVoltagePu": {
+    "a": 1.037,
+    "b": 1.0308,
+    "c": 1.0358
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "78",
+   "phases": "abc",
+   "v123Group": 37,
+   "benchmarkVoltagePu": {
+    "a": 1.0373,
+    "b": 1.0312,
+    "c": 1.036
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "79",
+   "phases": "abc",
+   "v123Group": 38,
+   "benchmarkVoltagePu": {
+    "a": 1.037,
+    "b": 1.0313,
+    "c": 1.0359
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "80",
+   "phases": "abc",
+   "v123Group": 39,
+   "benchmarkVoltagePu": {
+    "a": 1.0394,
+    "b": 1.0329,
+    "c": 1.0368
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "81",
+   "phases": "abc",
+   "v123Group": 40,
+   "benchmarkVoltagePu": {
+    "a": 1.0415,
+    "b": 1.0352,
+    "c": 1.0374
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "82",
+   "phases": "abc",
+   "v123Group": 41,
+   "benchmarkVoltagePu": {
+    "a": 1.0424,
+    "b": 1.0364,
+    "c": 1.0382
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "83",
+   "phases": "abc",
+   "v123Group": 42,
+   "benchmarkVoltagePu": {
+    "a": 1.0436,
+    "b": 1.0375,
+    "c": 1.039
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "84",
+   "phases": "c",
+   "v123Group": 43,
+   "benchmarkVoltagePu": {
+    "c": 1.0348
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "85",
+   "phases": "c",
+   "v123Group": 44,
+   "benchmarkVoltagePu": {
+    "c": 1.0336
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "86",
+   "phases": "abc",
+   "v123Group": 45,
+   "benchmarkVoltagePu": {
+    "a": 1.0349,
+    "b": 1.0279,
+    "c": 1.0364
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "87",
+   "phases": "abc",
+   "v123Group": 46,
+   "benchmarkVoltagePu": {
+    "a": 1.0342,
+    "b": 1.0272,
+    "c": 1.0369
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "88",
+   "phases": "a",
+   "v123Group": 47,
+   "benchmarkVoltagePu": {
+    "a": 1.0342
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "89",
+   "phases": "abc",
+   "v123Group": 48,
+   "benchmarkVoltagePu": {
+    "a": 1.0338,
+    "b": 1.027,
+    "c": 1.0373
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "90",
+   "phases": "b",
+   "v123Group": 49,
+   "benchmarkVoltagePu": {
+    "b": 1.0269
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-I",
+   "kind": "bus"
+  },
+  {
+   "id": "91",
+   "phases": "abc",
+   "v123Group": 50,
+   "benchmarkVoltagePu": {
+    "a": 1.0336,
+    "b": 1.0266,
+    "c": 1.0376
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "92",
+   "phases": "c",
+   "v123Group": 51,
+   "benchmarkVoltagePu": {
+    "c": 1.0375
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "93",
+   "phases": "abc",
+   "v123Group": 52,
+   "benchmarkVoltagePu": {
+    "a": 1.0333,
+    "b": 1.0265,
+    "c": 1.0377
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "94",
+   "phases": "a",
+   "v123Group": 53,
+   "benchmarkVoltagePu": {
+    "a": 1.0326
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "95",
+   "phases": "abc",
+   "v123Group": 54,
+   "benchmarkVoltagePu": {
+    "a": 1.0332,
+    "b": 1.0261,
+    "c": 1.0378
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "96",
+   "phases": "b",
+   "v123Group": 55,
+   "benchmarkVoltagePu": {
+    "b": 1.0258
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "97",
+   "phases": "abc",
+   "v123Group": 56,
+   "benchmarkVoltagePu": {
+    "a": 1.0345,
+    "b": 1.0306,
+    "c": 1.0338
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "197",
+   "phases": "abc",
+   "v123Group": 57,
+   "benchmarkVoltagePu": {
+    "a": 1.0345,
+    "b": 1.0306,
+    "c": 1.0338
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "101",
+   "phases": "abc",
+   "v123Group": 58,
+   "benchmarkVoltagePu": {
+    "a": 1.0337,
+    "b": 1.0303,
+    "c": 1.0332
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "102",
+   "phases": "c",
+   "v123Group": 59,
+   "benchmarkVoltagePu": {
+    "c": 1.0318
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "103",
+   "phases": "c",
+   "v123Group": 60,
+   "benchmarkVoltagePu": {
+    "c": 1.0301
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "104",
+   "phases": "c",
+   "v123Group": 61,
+   "benchmarkVoltagePu": {
+    "c": 1.0283
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "105",
+   "phases": "abc",
+   "v123Group": 62,
+   "benchmarkVoltagePu": {
+    "a": 1.0323,
+    "b": 1.0301,
+    "c": 1.0335
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "106",
+   "phases": "b",
+   "v123Group": 63,
+   "benchmarkVoltagePu": {
+    "b": 1.029
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "107",
+   "phases": "b",
+   "v123Group": 64,
+   "benchmarkVoltagePu": {
+    "b": 1.0275
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "108",
+   "phases": "abc",
+   "v123Group": 65,
+   "benchmarkVoltagePu": {
+    "a": 1.0309,
+    "b": 1.0308,
+    "c": 1.0334
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "109",
+   "phases": "a",
+   "v123Group": 66,
+   "benchmarkVoltagePu": {
+    "a": 1.0267
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "110",
+   "phases": "a",
+   "v123Group": 67,
+   "benchmarkVoltagePu": {
+    "a": 1.0248
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "111",
+   "phases": "a",
+   "v123Group": 68,
+   "benchmarkVoltagePu": {
+    "a": 1.024
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "112",
+   "phases": "a",
+   "v123Group": 69,
+   "benchmarkVoltagePu": {
+    "a": 1.0241
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-I",
+   "kind": "bus"
+  },
+  {
+   "id": "113",
+   "phases": "a",
+   "v123Group": 70,
+   "benchmarkVoltagePu": {
+    "a": 1.022
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "114",
+   "phases": "a",
+   "v123Group": 71,
+   "benchmarkVoltagePu": {
+    "a": 1.0216
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "300",
+   "phases": "abc",
+   "v123Group": 72,
+   "benchmarkVoltagePu": {
+    "a": 1.0309,
+    "b": 1.0308,
+    "c": 1.0334
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "98",
+   "phases": "abc",
+   "v123Group": 73,
+   "benchmarkVoltagePu": {
+    "a": 1.0343,
+    "b": 1.0303,
+    "c": 1.0336
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "99",
+   "phases": "abc",
+   "v123Group": 74,
+   "benchmarkVoltagePu": {
+    "a": 1.0346,
+    "b": 1.0295,
+    "c": 1.0332
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "100",
+   "phases": "abc",
+   "v123Group": 75,
+   "benchmarkVoltagePu": {
+    "a": 1.0348,
+    "b": 1.0294,
+    "c": 1.0328
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "450",
+   "phases": "abc",
+   "v123Group": 76,
+   "benchmarkVoltagePu": {
+    "a": 1.0348,
+    "b": 1.0294,
+    "c": 1.0328
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "61",
+   "phases": "abc",
+   "v123Group": 77,
+   "benchmarkVoltagePu": {
+    "a": 0.988,
+    "b": 1.0256,
+    "c": 1.0052
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "XF1",
+   "phases": "abc",
+   "v123Group": 78,
+   "benchmarkVoltagePu": {
+    "a": 0.988,
+    "b": 1.0256,
+    "c": 1.0052
+   },
+   "kind": "transformer-terminal"
+  },
+  {
+   "id": "610",
+   "phases": "abc",
+   "v123Group": 79,
+   "benchmarkVoltagePu": {
+    "a": 0.988,
+    "b": 1.0256,
+    "c": 1.0052
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "62",
+   "phases": "abc",
+   "v123Group": 80,
+   "benchmarkVoltagePu": {
+    "a": 0.9872,
+    "b": 1.0245,
+    "c": 1.0032
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "63",
+   "phases": "abc",
+   "v123Group": 81,
+   "benchmarkVoltagePu": {
+    "a": 0.9866,
+    "b": 1.0236,
+    "c": 1.0022
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "64",
+   "phases": "abc",
+   "v123Group": 82,
+   "benchmarkVoltagePu": {
+    "a": 0.9863,
+    "b": 1.0217,
+    "c": 1.0
+   },
+   "loadKw": 75.0,
+   "loadKvar": 35.0,
+   "loadModel": "Y-I",
+   "kind": "bus"
+  },
+  {
+   "id": "65",
+   "phases": "abc",
+   "v123Group": 83,
+   "benchmarkVoltagePu": {
+    "a": 0.9856,
+    "b": 1.0214,
+    "c": 0.997
+   },
+   "loadKw": 140.0,
+   "loadKvar": 100.0,
+   "loadModel": "D-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "66",
+   "phases": "abc",
+   "v123Group": 84,
+   "benchmarkVoltagePu": {
+    "a": 0.9858,
+    "b": 1.0216,
+    "c": 0.9955
+   },
+   "loadKw": 75.0,
+   "loadKvar": 35.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "18",
+   "phases": "abc",
+   "v123Group": 85,
+   "benchmarkVoltagePu": {
+    "a": 0.9988,
+    "b": 1.0319,
+    "c": 1.0122
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "135",
+   "phases": "abc",
+   "v123Group": 86,
+   "benchmarkVoltagePu": {
+    "a": 0.9988,
+    "b": 1.0318,
+    "c": 1.0122
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "35",
+   "phases": "abc",
+   "v123Group": 87,
+   "benchmarkVoltagePu": {
+    "a": 0.996,
+    "b": 1.0293,
+    "c": 1.0112
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "D-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "36",
+   "phases": "ab",
+   "v123Group": 88,
+   "benchmarkVoltagePu": {
+    "a": 0.9951,
+    "b": 1.0288
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "37",
+   "phases": "a",
+   "v123Group": 89,
+   "benchmarkVoltagePu": {
+    "a": 0.9943
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "38",
+   "phases": "b",
+   "v123Group": 90,
+   "benchmarkVoltagePu": {
+    "b": 1.0282
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-I",
+   "kind": "bus"
+  },
+  {
+   "id": "39",
+   "phases": "b",
+   "v123Group": 91,
+   "benchmarkVoltagePu": {
+    "b": 1.0278
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "40",
+   "phases": "abc",
+   "v123Group": 92,
+   "benchmarkVoltagePu": {
+    "a": 0.9945,
+    "b": 1.0282,
+    "c": 1.0101
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "41",
+   "phases": "c",
+   "v123Group": 93,
+   "benchmarkVoltagePu": {
+    "c": 1.0097
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "42",
+   "phases": "abc",
+   "v123Group": 94,
+   "benchmarkVoltagePu": {
+    "a": 0.9929,
+    "b": 1.027,
+    "c": 1.0092
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "43",
+   "phases": "b",
+   "v123Group": 95,
+   "benchmarkVoltagePu": {
+    "b": 1.0257
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "44",
+   "phases": "abc",
+   "v123Group": 96,
+   "benchmarkVoltagePu": {
+    "a": 0.9918,
+    "b": 1.0263,
+    "c": 1.0084
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "45",
+   "phases": "a",
+   "v123Group": 97,
+   "benchmarkVoltagePu": {
+    "a": 0.9913
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-I",
+   "kind": "bus"
+  },
+  {
+   "id": "46",
+   "phases": "a",
+   "v123Group": 98,
+   "benchmarkVoltagePu": {
+    "a": 0.9909
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "47",
+   "phases": "abc",
+   "v123Group": 99,
+   "benchmarkVoltagePu": {
+    "a": 0.9908,
+    "b": 1.0253,
+    "c": 1.0074
+   },
+   "loadKw": 105.0,
+   "loadKvar": 75.0,
+   "loadModel": "Y-I",
+   "kind": "bus"
+  },
+  {
+   "id": "48",
+   "phases": "abc",
+   "v123Group": 100,
+   "benchmarkVoltagePu": {
+    "a": 0.9905,
+    "b": 1.025,
+    "c": 1.0072
+   },
+   "loadKw": 210.0,
+   "loadKvar": 150.0,
+   "loadModel": "Y-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "49",
+   "phases": "abc",
+   "v123Group": 101,
+   "benchmarkVoltagePu": {
+    "a": 0.9905,
+    "b": 1.0247,
+    "c": 1.0071
+   },
+   "loadKw": 140.0,
+   "loadKvar": 95.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "50",
+   "phases": "abc",
+   "v123Group": 102,
+   "benchmarkVoltagePu": {
+    "a": 0.9905,
+    "b": 1.0247,
+    "c": 1.0067
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "51",
+   "phases": "abc",
+   "v123Group": 103,
+   "benchmarkVoltagePu": {
+    "a": 0.9903,
+    "b": 1.0248,
+    "c": 1.0067
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "151",
+   "phases": "abc",
+   "v123Group": 104,
+   "benchmarkVoltagePu": {
+    "a": 0.9903,
+    "b": 1.0248,
+    "c": 1.0067
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "19",
+   "phases": "a",
+   "v123Group": 105,
+   "benchmarkVoltagePu": {
+    "a": 0.9975
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "20",
+   "phases": "a",
+   "v123Group": 106,
+   "benchmarkVoltagePu": {
+    "a": 0.9967
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-I",
+   "kind": "bus"
+  },
+  {
+   "id": "21",
+   "phases": "abc",
+   "v123Group": 107,
+   "benchmarkVoltagePu": {
+    "a": 0.9983,
+    "b": 1.032,
+    "c": 1.0111
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "22",
+   "phases": "b",
+   "v123Group": 108,
+   "benchmarkVoltagePu": {
+    "b": 1.0305
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "23",
+   "phases": "abc",
+   "v123Group": 109,
+   "benchmarkVoltagePu": {
+    "a": 0.9979,
+    "b": 1.0323,
+    "c": 1.01
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "24",
+   "phases": "c",
+   "v123Group": 110,
+   "benchmarkVoltagePu": {
+    "c": 1.0085
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "25",
+   "phases": "abc",
+   "v123Group": 111,
+   "benchmarkVoltagePu": {
+    "a": 0.9972,
+    "b": 1.0328,
+    "c": 1.0091
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "28",
+   "phases": "abc",
+   "v123Group": 112,
+   "benchmarkVoltagePu": {
+    "a": 0.9968,
+    "b": 1.033,
+    "c": 1.0087
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-I",
+   "kind": "bus"
+  },
+  {
+   "id": "29",
+   "phases": "abc",
+   "v123Group": 113,
+   "benchmarkVoltagePu": {
+    "a": 0.9967,
+    "b": 1.0332,
+    "c": 1.0083
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "30",
+   "phases": "abc",
+   "v123Group": 114,
+   "benchmarkVoltagePu": {
+    "a": 0.9969,
+    "b": 1.0331,
+    "c": 1.0078
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "250",
+   "phases": "abc",
+   "v123Group": 115,
+   "benchmarkVoltagePu": {
+    "a": 0.9969,
+    "b": 1.0331,
+    "c": 1.0078
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "RG3",
+   "phases": "ac",
+   "v123Group": 116,
+   "benchmarkVoltagePu": {
+    "a": 0.9972,
+    "c": 1.0028
+   },
+   "kind": "regulator-terminal"
+  },
+  {
+   "id": "26",
+   "phases": "ac",
+   "v123Group": 117,
+   "benchmarkVoltagePu": {
+    "a": 0.997,
+    "c": 1.0023
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "27",
+   "phases": "ac",
+   "v123Group": 118,
+   "benchmarkVoltagePu": {
+    "a": 0.9966,
+    "c": 1.0022
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "33",
+   "phases": "a",
+   "v123Group": 119,
+   "benchmarkVoltagePu": {
+    "a": 0.9953
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-I",
+   "kind": "bus"
+  },
+  {
+   "id": "31",
+   "phases": "c",
+   "v123Group": 120,
+   "benchmarkVoltagePu": {
+    "c": 1.0017
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "32",
+   "phases": "c",
+   "v123Group": 121,
+   "benchmarkVoltagePu": {
+    "c": 1.0013
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "34",
+   "phases": "c",
+   "v123Group": 122,
+   "benchmarkVoltagePu": {
+    "c": 1.0187
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "15",
+   "phases": "c",
+   "v123Group": 123,
+   "benchmarkVoltagePu": {
+    "c": 1.0183
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "16",
+   "phases": "c",
+   "v123Group": 124,
+   "benchmarkVoltagePu": {
+    "c": 1.0173
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "17",
+   "phases": "c",
+   "v123Group": 125,
+   "benchmarkVoltagePu": {
+    "c": 1.0178
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "9",
+   "phases": "a",
+   "v123Group": 126,
+   "benchmarkVoltagePu": {
+    "a": 1.0144
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-PQ",
+   "kind": "bus"
+  },
+  {
+   "id": "RG2",
+   "phases": "a",
+   "v123Group": 127,
+   "benchmarkVoltagePu": {
+    "a": 1.008
+   },
+   "kind": "regulator-terminal"
+  },
+  {
+   "id": "14",
+   "phases": "a",
+   "v123Group": 128,
+   "benchmarkVoltagePu": {
+    "a": 1.0063
+   },
+   "kind": "bus"
+  },
+  {
+   "id": "10",
+   "phases": "a",
+   "v123Group": 129,
+   "benchmarkVoltagePu": {
+    "a": 1.006
+   },
+   "loadKw": 20.0,
+   "loadKvar": 10.0,
+   "loadModel": "Y-I",
+   "kind": "bus"
+  },
+  {
+   "id": "11",
+   "phases": "a",
+   "v123Group": 130,
+   "benchmarkVoltagePu": {
+    "a": 1.0057
+   },
+   "loadKw": 40.0,
+   "loadKvar": 20.0,
+   "loadModel": "Y-Z",
+   "kind": "bus"
+  },
+  {
+   "id": "251",
+   "phases": null,
+   "v123Group": null,
+   "note": "not in the benchmark voltage profile / V123",
+   "kind": "open-switch-end"
+  },
+  {
+   "id": "350",
+   "phases": null,
+   "v123Group": null,
+   "note": "not in the benchmark voltage profile / V123",
+   "kind": "open-switch-end"
+  },
+  {
+   "id": "451",
+   "phases": null,
+   "v123Group": null,
+   "note": "not in the benchmark voltage profile / V123",
+   "kind": "open-switch-end"
+  }
+ ],
+ "edges": [
+  {
+   "from": "1",
+   "to": "2",
+   "type": "line",
+   "lengthFt": 175.0,
+   "config": 10
+  },
+  {
+   "from": "1",
+   "to": "3",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 11
+  },
+  {
+   "from": "1",
+   "to": "7",
+   "type": "line",
+   "lengthFt": 300.0,
+   "config": 1
+  },
+  {
+   "from": "3",
+   "to": "4",
+   "type": "line",
+   "lengthFt": 200.0,
+   "config": 11
+  },
+  {
+   "from": "3",
+   "to": "5",
+   "type": "line",
+   "lengthFt": 325.0,
+   "config": 11
+  },
+  {
+   "from": "5",
+   "to": "6",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 11
+  },
+  {
+   "from": "7",
+   "to": "8",
+   "type": "line",
+   "lengthFt": 200.0,
+   "config": 1
+  },
+  {
+   "from": "8",
+   "to": "12",
+   "type": "line",
+   "lengthFt": 225.0,
+   "config": 10
+  },
+  {
+   "from": "8",
+   "to": "9",
+   "type": "line",
+   "lengthFt": 225.0,
+   "config": 9
+  },
+  {
+   "from": "8",
+   "to": "13",
+   "type": "line",
+   "lengthFt": 300.0,
+   "config": 1
+  },
+  {
+   "from": "9",
+   "to": "14",
+   "type": "line",
+   "lengthFt": 425.0,
+   "config": 9
+  },
+  {
+   "from": "13",
+   "to": "34",
+   "type": "line",
+   "lengthFt": 150.0,
+   "config": 11
+  },
+  {
+   "from": "13",
+   "to": "18",
+   "type": "line",
+   "lengthFt": 825.0,
+   "config": 2
+  },
+  {
+   "from": "14",
+   "to": "11",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 9
+  },
+  {
+   "from": "14",
+   "to": "10",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 9
+  },
+  {
+   "from": "15",
+   "to": "16",
+   "type": "line",
+   "lengthFt": 375.0,
+   "config": 11
+  },
+  {
+   "from": "15",
+   "to": "17",
+   "type": "line",
+   "lengthFt": 350.0,
+   "config": 11
+  },
+  {
+   "from": "18",
+   "to": "19",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 9
+  },
+  {
+   "from": "18",
+   "to": "21",
+   "type": "line",
+   "lengthFt": 300.0,
+   "config": 2
+  },
+  {
+   "from": "19",
+   "to": "20",
+   "type": "line",
+   "lengthFt": 325.0,
+   "config": 9
+  },
+  {
+   "from": "21",
+   "to": "22",
+   "type": "line",
+   "lengthFt": 525.0,
+   "config": 10
+  },
+  {
+   "from": "21",
+   "to": "23",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 2
+  },
+  {
+   "from": "23",
+   "to": "24",
+   "type": "line",
+   "lengthFt": 550.0,
+   "config": 11
+  },
+  {
+   "from": "23",
+   "to": "25",
+   "type": "line",
+   "lengthFt": 275.0,
+   "config": 2
+  },
+  {
+   "from": "25",
+   "to": "26",
+   "type": "line",
+   "lengthFt": 350.0,
+   "config": 7
+  },
+  {
+   "from": "25",
+   "to": "28",
+   "type": "line",
+   "lengthFt": 200.0,
+   "config": 2
+  },
+  {
+   "from": "26",
+   "to": "27",
+   "type": "line",
+   "lengthFt": 275.0,
+   "config": 7
+  },
+  {
+   "from": "26",
+   "to": "31",
+   "type": "line",
+   "lengthFt": 225.0,
+   "config": 11
+  },
+  {
+   "from": "27",
+   "to": "33",
+   "type": "line",
+   "lengthFt": 500.0,
+   "config": 9
+  },
+  {
+   "from": "28",
+   "to": "29",
+   "type": "line",
+   "lengthFt": 300.0,
+   "config": 2
+  },
+  {
+   "from": "29",
+   "to": "30",
+   "type": "line",
+   "lengthFt": 350.0,
+   "config": 2
+  },
+  {
+   "from": "30",
+   "to": "250",
+   "type": "line",
+   "lengthFt": 200.0,
+   "config": 2
+  },
+  {
+   "from": "31",
+   "to": "32",
+   "type": "line",
+   "lengthFt": 300.0,
+   "config": 11
+  },
+  {
+   "from": "34",
+   "to": "15",
+   "type": "line",
+   "lengthFt": 100.0,
+   "config": 11
+  },
+  {
+   "from": "35",
+   "to": "36",
+   "type": "line",
+   "lengthFt": 650.0,
+   "config": 8
+  },
+  {
+   "from": "35",
+   "to": "40",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 1
+  },
+  {
+   "from": "36",
+   "to": "37",
+   "type": "line",
+   "lengthFt": 300.0,
+   "config": 9
+  },
+  {
+   "from": "36",
+   "to": "38",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 10
+  },
+  {
+   "from": "38",
+   "to": "39",
+   "type": "line",
+   "lengthFt": 325.0,
+   "config": 10
+  },
+  {
+   "from": "40",
+   "to": "41",
+   "type": "line",
+   "lengthFt": 325.0,
+   "config": 11
+  },
+  {
+   "from": "40",
+   "to": "42",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 1
+  },
+  {
+   "from": "42",
+   "to": "43",
+   "type": "line",
+   "lengthFt": 500.0,
+   "config": 10
+  },
+  {
+   "from": "42",
+   "to": "44",
+   "type": "line",
+   "lengthFt": 200.0,
+   "config": 1
+  },
+  {
+   "from": "44",
+   "to": "45",
+   "type": "line",
+   "lengthFt": 200.0,
+   "config": 9
+  },
+  {
+   "from": "44",
+   "to": "47",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 1
+  },
+  {
+   "from": "45",
+   "to": "46",
+   "type": "line",
+   "lengthFt": 300.0,
+   "config": 9
+  },
+  {
+   "from": "47",
+   "to": "48",
+   "type": "line",
+   "lengthFt": 150.0,
+   "config": 4
+  },
+  {
+   "from": "47",
+   "to": "49",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 4
+  },
+  {
+   "from": "49",
+   "to": "50",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 4
+  },
+  {
+   "from": "50",
+   "to": "51",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 4
+  },
+  {
+   "from": "51",
+   "to": "151",
+   "type": "line",
+   "lengthFt": 500.0,
+   "config": 4
+  },
+  {
+   "from": "52",
+   "to": "53",
+   "type": "line",
+   "lengthFt": 200.0,
+   "config": 1
+  },
+  {
+   "from": "53",
+   "to": "54",
+   "type": "line",
+   "lengthFt": 125.0,
+   "config": 1
+  },
+  {
+   "from": "54",
+   "to": "55",
+   "type": "line",
+   "lengthFt": 275.0,
+   "config": 1
+  },
+  {
+   "from": "54",
+   "to": "57",
+   "type": "line",
+   "lengthFt": 350.0,
+   "config": 3
+  },
+  {
+   "from": "55",
+   "to": "56",
+   "type": "line",
+   "lengthFt": 275.0,
+   "config": 1
+  },
+  {
+   "from": "57",
+   "to": "58",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 10
+  },
+  {
+   "from": "57",
+   "to": "60",
+   "type": "line",
+   "lengthFt": 750.0,
+   "config": 3
+  },
+  {
+   "from": "58",
+   "to": "59",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 10
+  },
+  {
+   "from": "60",
+   "to": "61",
+   "type": "line",
+   "lengthFt": 550.0,
+   "config": 5
+  },
+  {
+   "from": "60",
+   "to": "62",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 12
+  },
+  {
+   "from": "62",
+   "to": "63",
+   "type": "line",
+   "lengthFt": 175.0,
+   "config": 12
+  },
+  {
+   "from": "63",
+   "to": "64",
+   "type": "line",
+   "lengthFt": 350.0,
+   "config": 12
+  },
+  {
+   "from": "64",
+   "to": "65",
+   "type": "line",
+   "lengthFt": 425.0,
+   "config": 12
+  },
+  {
+   "from": "65",
+   "to": "66",
+   "type": "line",
+   "lengthFt": 325.0,
+   "config": 12
+  },
+  {
+   "from": "67",
+   "to": "68",
+   "type": "line",
+   "lengthFt": 200.0,
+   "config": 9
+  },
+  {
+   "from": "67",
+   "to": "72",
+   "type": "line",
+   "lengthFt": 275.0,
+   "config": 3
+  },
+  {
+   "from": "67",
+   "to": "97",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 3
+  },
+  {
+   "from": "68",
+   "to": "69",
+   "type": "line",
+   "lengthFt": 275.0,
+   "config": 9
+  },
+  {
+   "from": "69",
+   "to": "70",
+   "type": "line",
+   "lengthFt": 325.0,
+   "config": 9
+  },
+  {
+   "from": "70",
+   "to": "71",
+   "type": "line",
+   "lengthFt": 275.0,
+   "config": 9
+  },
+  {
+   "from": "72",
+   "to": "73",
+   "type": "line",
+   "lengthFt": 275.0,
+   "config": 11
+  },
+  {
+   "from": "72",
+   "to": "76",
+   "type": "line",
+   "lengthFt": 200.0,
+   "config": 3
+  },
+  {
+   "from": "73",
+   "to": "74",
+   "type": "line",
+   "lengthFt": 350.0,
+   "config": 11
+  },
+  {
+   "from": "74",
+   "to": "75",
+   "type": "line",
+   "lengthFt": 400.0,
+   "config": 11
+  },
+  {
+   "from": "76",
+   "to": "77",
+   "type": "line",
+   "lengthFt": 400.0,
+   "config": 6
+  },
+  {
+   "from": "76",
+   "to": "86",
+   "type": "line",
+   "lengthFt": 700.0,
+   "config": 3
+  },
+  {
+   "from": "77",
+   "to": "78",
+   "type": "line",
+   "lengthFt": 100.0,
+   "config": 6
+  },
+  {
+   "from": "78",
+   "to": "79",
+   "type": "line",
+   "lengthFt": 225.0,
+   "config": 6
+  },
+  {
+   "from": "78",
+   "to": "80",
+   "type": "line",
+   "lengthFt": 475.0,
+   "config": 6
+  },
+  {
+   "from": "80",
+   "to": "81",
+   "type": "line",
+   "lengthFt": 475.0,
+   "config": 6
+  },
+  {
+   "from": "81",
+   "to": "82",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 6
+  },
+  {
+   "from": "81",
+   "to": "84",
+   "type": "line",
+   "lengthFt": 675.0,
+   "config": 11
+  },
+  {
+   "from": "82",
+   "to": "83",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 6
+  },
+  {
+   "from": "84",
+   "to": "85",
+   "type": "line",
+   "lengthFt": 475.0,
+   "config": 11
+  },
+  {
+   "from": "86",
+   "to": "87",
+   "type": "line",
+   "lengthFt": 450.0,
+   "config": 6
+  },
+  {
+   "from": "87",
+   "to": "88",
+   "type": "line",
+   "lengthFt": 175.0,
+   "config": 9
+  },
+  {
+   "from": "87",
+   "to": "89",
+   "type": "line",
+   "lengthFt": 275.0,
+   "config": 6
+  },
+  {
+   "from": "89",
+   "to": "90",
+   "type": "line",
+   "lengthFt": 225.0,
+   "config": 10
+  },
+  {
+   "from": "89",
+   "to": "91",
+   "type": "line",
+   "lengthFt": 225.0,
+   "config": 6
+  },
+  {
+   "from": "91",
+   "to": "92",
+   "type": "line",
+   "lengthFt": 300.0,
+   "config": 11
+  },
+  {
+   "from": "91",
+   "to": "93",
+   "type": "line",
+   "lengthFt": 225.0,
+   "config": 6
+  },
+  {
+   "from": "93",
+   "to": "94",
+   "type": "line",
+   "lengthFt": 275.0,
+   "config": 9
+  },
+  {
+   "from": "93",
+   "to": "95",
+   "type": "line",
+   "lengthFt": 300.0,
+   "config": 6
+  },
+  {
+   "from": "95",
+   "to": "96",
+   "type": "line",
+   "lengthFt": 200.0,
+   "config": 10
+  },
+  {
+   "from": "97",
+   "to": "98",
+   "type": "line",
+   "lengthFt": 275.0,
+   "config": 3
+  },
+  {
+   "from": "98",
+   "to": "99",
+   "type": "line",
+   "lengthFt": 550.0,
+   "config": 3
+  },
+  {
+   "from": "99",
+   "to": "100",
+   "type": "line",
+   "lengthFt": 300.0,
+   "config": 3
+  },
+  {
+   "from": "100",
+   "to": "450",
+   "type": "line",
+   "lengthFt": 800.0,
+   "config": 3
+  },
+  {
+   "from": "101",
+   "to": "102",
+   "type": "line",
+   "lengthFt": 225.0,
+   "config": 11
+  },
+  {
+   "from": "101",
+   "to": "105",
+   "type": "line",
+   "lengthFt": 275.0,
+   "config": 3
+  },
+  {
+   "from": "102",
+   "to": "103",
+   "type": "line",
+   "lengthFt": 325.0,
+   "config": 11
+  },
+  {
+   "from": "103",
+   "to": "104",
+   "type": "line",
+   "lengthFt": 700.0,
+   "config": 11
+  },
+  {
+   "from": "105",
+   "to": "106",
+   "type": "line",
+   "lengthFt": 225.0,
+   "config": 10
+  },
+  {
+   "from": "105",
+   "to": "108",
+   "type": "line",
+   "lengthFt": 325.0,
+   "config": 3
+  },
+  {
+   "from": "106",
+   "to": "107",
+   "type": "line",
+   "lengthFt": 575.0,
+   "config": 10
+  },
+  {
+   "from": "108",
+   "to": "109",
+   "type": "line",
+   "lengthFt": 450.0,
+   "config": 9
+  },
+  {
+   "from": "108",
+   "to": "300",
+   "type": "line",
+   "lengthFt": 1000.0,
+   "config": 3
+  },
+  {
+   "from": "109",
+   "to": "110",
+   "type": "line",
+   "lengthFt": 300.0,
+   "config": 9
+  },
+  {
+   "from": "110",
+   "to": "111",
+   "type": "line",
+   "lengthFt": 575.0,
+   "config": 9
+  },
+  {
+   "from": "110",
+   "to": "112",
+   "type": "line",
+   "lengthFt": 125.0,
+   "config": 9
+  },
+  {
+   "from": "112",
+   "to": "113",
+   "type": "line",
+   "lengthFt": 525.0,
+   "config": 9
+  },
+  {
+   "from": "113",
+   "to": "114",
+   "type": "line",
+   "lengthFt": 325.0,
+   "config": 9
+  },
+  {
+   "from": "135",
+   "to": "35",
+   "type": "line",
+   "lengthFt": 375.0,
+   "config": 4
+  },
+  {
+   "from": "149",
+   "to": "1",
+   "type": "line",
+   "lengthFt": 400.0,
+   "config": 1
+  },
+  {
+   "from": "152",
+   "to": "52",
+   "type": "line",
+   "lengthFt": 400.0,
+   "config": 1
+  },
+  {
+   "from": "160",
+   "to": "67",
+   "type": "line",
+   "lengthFt": 350.0,
+   "config": 6
+  },
+  {
+   "from": "197",
+   "to": "101",
+   "type": "line",
+   "lengthFt": 250.0,
+   "config": 3
+  },
+  {
+   "from": "13",
+   "to": "152",
+   "type": "switch",
+   "normal": "closed"
+  },
+  {
+   "from": "18",
+   "to": "135",
+   "type": "switch",
+   "normal": "closed"
+  },
+  {
+   "from": "60",
+   "to": "160",
+   "type": "switch",
+   "normal": "closed"
+  },
+  {
+   "from": "61",
+   "to": "610",
+   "type": "switch",
+   "normal": "closed"
+  },
+  {
+   "from": "97",
+   "to": "197",
+   "type": "switch",
+   "normal": "closed"
+  },
+  {
+   "from": "150",
+   "to": "149",
+   "type": "switch",
+   "normal": "closed"
+  },
+  {
+   "from": "250",
+   "to": "251",
+   "type": "switch",
+   "normal": "open"
+  },
+  {
+   "from": "450",
+   "to": "451",
+   "type": "switch",
+   "normal": "open"
+  },
+  {
+   "from": "54",
+   "to": "94",
+   "type": "switch",
+   "normal": "open"
+  },
+  {
+   "from": "151",
+   "to": "300",
+   "type": "switch",
+   "normal": "open"
+  },
+  {
+   "from": "300",
+   "to": "350",
+   "type": "switch",
+   "normal": "open"
+  },
+  {
+   "from": "150",
+   "to": "149",
+   "type": "regulator",
+   "id": 1,
+   "phases": "ABC"
+  },
+  {
+   "from": "9",
+   "to": "14",
+   "type": "regulator",
+   "id": 2,
+   "phases": "A"
+  },
+  {
+   "from": "25",
+   "to": "26",
+   "type": "regulator",
+   "id": 3,
+   "phases": "AC"
+  },
+  {
+   "from": "160",
+   "to": "67",
+   "type": "regulator",
+   "id": 4,
+   "phases": "ABC"
+  }
+ ]
+}

@@ -44,19 +44,28 @@ If real-time communication is required by the final system, **WebSocket communic
 The currently implemented flow is:
 
 ```text
-Node.js / Express
+MATLAB / Simulink
+       │  HTTP POST  or  TCP (newline-delimited JSON)
+       ▼
+Node.js / Express  (+ Socket.IO)
        │
-       ├──────────────► MongoDB
+       ├──────────────► MongoDB        one document per bus per time step
        │
-       │ HTTP request
+       │ POST /predict (async queue, never blocks ingestion)
        ▼
 Python FastAPI ML Service
        │
        ▼
-Dummy Prediction
+Forecast per monitored bus
+       │
+       │ Socket.IO events: measurement / prediction / alarm / status
+       ▼
+React SCADA dashboard (currently still polls REST)
 ```
 
-The current implementation focuses on establishing reliable communication between the backend, database, and ML service before implementing the actual ML model.
+Ingestion is transport-agnostic: HTTP, TCP and any future UDP listener all call the
+same `ingestMeasurement()` service, which validates against the feeder topology and
+stores one document per bus per step.
 
 ---
 
@@ -72,7 +81,12 @@ BTech_Project/
 │   │   ├── models/
 │   │   ├── routes/
 │   │   ├── services/
+│   │   ├── utils/
 │   │   └── app.js
+│   ├── data/
+│   │   └── feeder_topology.json   # copy of frontend/src/data, used for validation
+│   ├── scripts/
+│   │   └── cleanTestMeasurements.js
 │   ├── server.js
 │   ├── .env.example
 │   ├── package.json
@@ -98,51 +112,86 @@ The backend is implemented using:
 * Express.js
 * Mongoose
 * MongoDB
+* Socket.IO
 * Axios
 * CORS
 * dotenv
 
 ### Implemented APIs
 
-| Method | Endpoint            | Purpose                       |
-| ------ | ------------------- | ----------------------------- |
-| GET    | `/api/health`       | Backend health check          |
-| POST   | `/api/measurements` | Store electrical measurements |
-| GET    | `/api/measurements` | Retrieve stored measurements  |
-| POST   | `/api/predict`      | Send data to the ML service   |
+| Method | Endpoint            | Purpose                                              |
+| ------ | ------------------- | ---------------------------------------------------- |
+| GET    | `/api/health`       | Backend + MongoDB + ML reachability                  |
+| GET    | `/api/stats`        | Packet/loss/latency/prediction counters              |
+| GET    | `/api/topology`     | Feeder topology (nodes + edges)                      |
+| POST   | `/api/measurements` | Ingest one time step (single bus or many buses)      |
+| GET    | `/api/measurements` | Query measurements (`bus`, `runId`, `from`, `to`, `limit`) |
+| GET    | `/api/latest`       | Latest measurement per bus                           |
+| GET    | `/api/predictions`  | Stored forecasts (`bus`, `runId`, `limit`)           |
+| POST   | `/api/predict`      | Manually trigger a forecast for one bus              |
+
+TCP ingestion listens on `TCP_PORT` (newline-delimited JSON, same packet format as
+the HTTP body). Socket.IO events emitted: `measurement`, `prediction`, `alarm`,
+`status`.
 
 ---
 
 ## 2. MongoDB
 
-The initial measurement schema follows the planned electrical telemetry structure:
+One measurement document is stored **per bus per time step**. Voltage magnitudes
+are **per-unit**; phase angles in **degrees** are optional and are stored only when
+measured or calculated. A phase that does not exist at a bus is simply absent.
+`frequency` and `power` are optional.
 
 ```json
 {
-  "timestamp": "2026-10-05T10:15:30.120Z",
-  "frequency": 49.98,
+  "timestamp": "2026-01-01T07:30:00.000Z",
+  "step": 30,
+  "bus": "60",
+  "runId": "demo-run",
+  "loadFactor": 0.855,
   "voltage": {
-    "a": {
-      "magnitude": 230.4,
-      "angle": 1.8
-    },
-    "b": {
-      "magnitude": 229.9,
-      "angle": -118.3
-    },
-    "c": {
-      "magnitude": 230.1,
-      "angle": 121.2
-    }
+    "a": { "magnitude": 0.976933, "angle": 10.5 },
+    "b": { "magnitude": 0.980433, "angle": -109.5 },
+    "c": { "magnitude": 0.983933, "angle": 130.5 }
   },
-  "power": {
-    "active": 7.8,
-    "reactive": 2.3
-  }
+  "seq": 8030,
+  "receivedAt": "2026-10-11T15:28:58.368Z",
+  "source": "tcp"
 }
 ```
 
-> **Note:** This is the initial schema. The final schema will be reviewed after studying the IEEE-123 bus model and identifying the actual available measurements and ML requirements.
+Indexes: `{ bus: 1, timestamp: 1 }` and a **unique** `{ runId: 1, bus: 1, step: 1 }`
+(partial, so pre-existing documents without those keys are unaffected). Replaying the
+same step therefore cannot create duplicates.
+
+A forecast document records the origin step, the horizon of predicted points, and —
+once the real value arrives — `actualStep`, `actual` and the absolute `error`:
+
+```json
+{
+  "bus": "150",
+  "runId": "demo-run",
+  "model": "persistence-baseline",
+  "horizonSteps": 12,
+  "originStep": 30,
+  "originTimestamp": "2026-01-01T07:30:00.000Z",
+  "predictions": [
+    { "step": 31, "targetTimestamp": "2026-01-01T07:45:00.000Z",
+      "voltage": { "a": { "magnitude": 1.0315, "angle": 10.85 } } }
+  ],
+  "actualStep": 31,
+  "actual": { "a": { "magnitude": 1.0315, "angle": 10.85 } },
+  "error": { "a": { "magnitude": 0.0, "angle": 0.0 } },
+  "alarm": false
+}
+```
+
+Incoming packets are validated against `backend/data/feeder_topology.json`: the bus
+must exist with `kind: "bus"`, magnitudes must be within 0–2 pu, any supplied angles
+must be finite and within −180…180°, and only phases that exist at that bus are
+accepted. Magnitude-only phasors are valid; the backend does not invent missing
+angles.
 
 ---
 
@@ -163,9 +212,10 @@ GET  /health
 POST /predict
 ```
 
-The current `/predict` endpoint uses a **dummy prediction** only for testing backend-to-ML communication.
-
-The actual machine learning pipeline will be implemented later.
+The current `/predict` endpoint serves the **persistence baseline**: every horizon
+step repeats the last observed phasor. It is a legitimate forecasting baseline, not a
+placeholder. Trained RNN/LSTM/BiLSTM models will be added later under their own
+names, and each stored prediction records which model produced it.
 
 ---
 
@@ -183,7 +233,7 @@ MongoDB
               FastAPI ML Service
                      │
                      ▼
-              Dummy Prediction
+        Persistence-baseline forecast
 ```
 
 This flow has been tested successfully.
@@ -250,31 +300,20 @@ The exact input features, sequence length, prediction horizon, and model archite
 
 # Real-Time Communication
 
-WebSocket communication is **not implemented at the current stage**.
+Socket.IO **is implemented** on the backend. It is attached to the HTTP server in
+`server.js` and emits:
 
-If the final SCADA/monitoring system requires real-time communication, WebSocket will be integrated later.
+* `measurement` — the stored time step (all buses in the packet)
+* `prediction` — a stored forecast for a monitored bus
+* `alarm` — a predicted magnitude outside 0.95–1.05 pu
+* `status` — backend/ML availability, on connect and every 5 s
 
-Possible future flow:
+CORS is restricted to the frontend origin (`FRONTEND_URL`, default
+`http://127.0.0.1:5173`).
 
-```text
-MATLAB / Simulink
-        │
-        ▼
-Node.js Backend
-        │
-        ├──────────► MongoDB
-        │
-        └──────────► FastAPI ML Service
-                         │
-                         ▼
-                    Prediction
-                         │
-                         ▼
-                    WebSocket
-                         │
-                         ▼
-                  React SCADA
-```
+The React dashboard **still polls** `/api/health` and `/api/measurements` every 2.5 s
+and does not yet open a Socket.IO connection; switching it to these events is a
+frontend follow-up.
 
 ---
 
@@ -290,7 +329,14 @@ Node.js Backend
 * [x] Prediction API
 * [x] FastAPI ML service
 * [x] Backend ↔ FastAPI communication
-* [x] Dummy prediction testing
+* [x] Persistence-baseline forecast testing
+* [x] IEEE-123 feeder topology loaded for phase-aware validation
+* [x] Per-bus, per-step measurement model with replay-safe unique index
+* [x] Single transport-agnostic ingestion path (HTTP + TCP)
+* [x] Packet loss / latency / prediction statistics
+* [x] Async forecast queue with ML circuit breaker
+* [x] Socket.IO real-time events (measurement / prediction / alarm / status)
+* [x] React SCADA dashboard reading real backend data
 
 ### In Progress
 
@@ -310,8 +356,8 @@ Node.js Backend
 * [ ] BiLSTM comparison if required
 * [ ] Model evaluation
 * [ ] Real ML inference
-* [ ] React SCADA interface
-* [ ] WebSocket integration if required
+* [ ] Switch the React dashboard from polling to Socket.IO events
+* [ ] UDP ingestion listener (bridge from MATLAB)
 * [ ] Deployment
 
 ---
@@ -342,13 +388,30 @@ Sensitive environment variables should **not** be committed to GitHub.
 
 Use a local `.env` file for actual configuration.
 
-Example:
+Example (see `backend/.env.example` for the full annotated list):
 
 ```env
 PORT=5000
-MONGODB_URI=your_mongodb_connection_string
+TCP_HOST=0.0.0.0
+TCP_PORT=6000
+UDP_PORT=6001
+MONGODB_URI=mongodb://127.0.0.1:27017/scada
 ML_SERVICE_URL=http://127.0.0.1:8000
+FRONTEND_URL=http://127.0.0.1:5173
+HISTORY_L=12
+HORIZON_H=12
+MONITORED_BUSES=150,1,13,67,83,114
 ```
+
+`TCP_HOST`/`TCP_PORT` bind `0.0.0.0` so a second machine running MATLAB/Simulink can
+reach the feeder. On Windows this requires an inbound firewall rule, e.g.:
+
+```text
+netsh advfirewall firewall add rule name="SCADA backend HTTP" dir=in action=allow protocol=TCP localport=5000
+netsh advfirewall firewall add rule name="SCADA feeder TCP"   dir=in action=allow protocol=TCP localport=6000
+```
+
+`UDP_PORT` is reserved for a future UDP listener and is not wired up yet.
 
 Only `.env.example` should be committed with placeholder values.
 

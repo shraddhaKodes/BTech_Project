@@ -33,3 +33,13 @@ export async function getMeasurements() {
 
   return measurements;
 }
+
+export async function getRecentMeasurements(limit = 500) {
+  const measurements = await getJson(`/api/measurements?limit=${limit}`);
+
+  if (!Array.isArray(measurements)) {
+    throw new Error("The measurements API returned an unexpected response.");
+  }
+
+  return measurements.reverse();
+}

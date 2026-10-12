@@ -1,39 +1,71 @@
 import axios from "axios";
 
-const getMlServiceUrl = () => {
-  const baseUrl = process.env.ML_SERVICE_URL;
+import { config } from "../config/env.js";
 
-  if (!baseUrl) {
-    const error = new Error("ML_SERVICE_URL is required but was not provided.");
-    error.statusCode = 500;
-    throw error;
+const PREDICT_TIMEOUT_MS = 5000;
+const HEALTH_TIMEOUT_MS = 2000;
+
+export class MlServiceError extends Error {
+  constructor(message, { statusCode = 502, unreachable = false, details = null } = {}) {
+    super(message);
+    this.statusCode = statusCode;
+    this.unreachable = unreachable;
+    this.details = details;
+  }
+}
+
+const toServiceError = (error) => {
+  if (error.response) {
+    return new MlServiceError("ML service returned an error.", {
+      statusCode: 502,
+      details: error.response.data,
+    });
   }
 
-  return baseUrl.replace(/\/$/, "");
+  if (error.code === "ECONNABORTED") {
+    return new MlServiceError("ML service request timed out.", { unreachable: true });
+  }
+
+  if (error.request) {
+    return new MlServiceError("ML service is unavailable.", { unreachable: true });
+  }
+
+  return new MlServiceError("ML service request failed.", { details: error.message });
 };
 
-export const predict = async (values) => {
+/**
+ * @param {string} bus
+ * @param {number} horizon forecast steps ahead
+ * @param {Array<{step:number, timestamp:Date, loadFactor:number|null, voltage:object}>} history
+ *   oldest first, exactly HISTORY_L items
+ */
+export const predictVoltages = async ({ bus, horizon, history }) => {
   try {
     const response = await axios.post(
-      `${getMlServiceUrl()}/predict`,
-      { values },
-      { timeout: 5000 }
+      `${config.mlServiceUrl}/predict`,
+      { bus, horizon, history },
+      { timeout: PREDICT_TIMEOUT_MS }
     );
 
     return response.data;
   } catch (error) {
-    const serviceError = new Error("ML service request failed.");
-    serviceError.statusCode = 502;
+    throw toServiceError(error);
+  }
+};
 
-    if (error.response) {
-      serviceError.message = "ML service returned an error.";
-      serviceError.details = error.response.data;
-    } else if (error.code === "ECONNABORTED") {
-      serviceError.message = "ML service request timed out.";
-    } else if (error.request) {
-      serviceError.message = "ML service is unavailable.";
-    }
+export const checkMlService = async () => {
+  try {
+    const response = await axios.get(`${config.mlServiceUrl}/health`, {
+      timeout: HEALTH_TIMEOUT_MS,
+    });
 
-    throw serviceError;
+    return { reachable: true, status: response.status, url: config.mlServiceUrl };
+  } catch (error) {
+    return {
+      reachable: false,
+      status: error.response?.status ?? null,
+      url: config.mlServiceUrl,
+      error: error.response ? "ML service returned an error." : error.message,
+    };
   }
 };

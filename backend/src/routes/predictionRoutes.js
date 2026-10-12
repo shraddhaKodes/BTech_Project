@@ -1,9 +1,10 @@
 import express from "express";
 
-import { createPrediction } from "../controllers/predictionController.js";
+import { getPredictions } from "../controllers/predictionController.js";
 
+// Stored forecasts. See predictRoutes.js for the manual forecast trigger.
 const router = express.Router();
 
-router.post("/", createPrediction);
+router.get("/", getPredictions);
 
 export default router;

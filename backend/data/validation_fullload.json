@@ -1,0 +1,2268 @@
+{
+ "description": "Full-load comparison: published IEEE 123-node benchmark voltages vs the Simulink model (loading factor a=1, final row of V123 in ieee123_run1.mat). Voltage magnitudes in per-unit.",
+ "sources": {
+  "benchmark": "IEEE PES test feeder benchmark document, power-flow voltage profile",
+  "simulink": "IEEE123bus_v2019b_Discrete.slx, a=1, ieee123_run1.mat"
+ },
+ "summary": {
+  "points": 130,
+  "phaseValues": 274,
+  "meanAbsDiffPu": 0.0026,
+  "maxAbsDiffPu": 0.0125,
+  "maxAt": "610"
+ },
+ "nodes": [
+  {
+   "node": "150",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0,
+    "b": 1.0,
+    "c": 1.0
+   },
+   "simulinkPu": {
+    "a": 0.9997,
+    "b": 0.9998,
+    "c": 0.9998
+   },
+   "absDiffPu": {
+    "a": 0.0003,
+    "b": 0.0002,
+    "c": 0.0002
+   }
+  },
+  {
+   "node": "RG1",
+   "kind": "regulator-terminal",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0437,
+    "b": 1.0438,
+    "c": 1.0438
+   },
+   "simulinkPu": {
+    "a": 1.0455,
+    "b": 1.0456,
+    "c": 1.0455
+   },
+   "absDiffPu": {
+    "a": 0.0018,
+    "b": 0.0018,
+    "c": 0.0017
+   }
+  },
+  {
+   "node": "149",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0436,
+    "b": 1.0437,
+    "c": 1.0436
+   },
+   "simulinkPu": {
+    "a": 1.0455,
+    "b": 1.0456,
+    "c": 1.0455
+   },
+   "absDiffPu": {
+    "a": 0.0019,
+    "b": 0.0019,
+    "c": 0.0019
+   }
+  },
+  {
+   "node": "1",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0311,
+    "b": 1.0412,
+    "c": 1.0348
+   },
+   "simulinkPu": {
+    "a": 1.0327,
+    "b": 1.0428,
+    "c": 1.0364
+   },
+   "absDiffPu": {
+    "a": 0.0016,
+    "b": 0.0016,
+    "c": 0.0016
+   }
+  },
+  {
+   "node": "2",
+   "kind": "bus",
+   "phases": "b",
+   "benchmarkPu": {
+    "b": 1.041
+   },
+   "simulinkPu": {
+    "b": 1.0427
+   },
+   "absDiffPu": {
+    "b": 0.0017
+   }
+  },
+  {
+   "node": "3",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0331
+   },
+   "simulinkPu": {
+    "c": 1.0359
+   },
+   "absDiffPu": {
+    "c": 0.0028
+   }
+  },
+  {
+   "node": "4",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0326
+   },
+   "simulinkPu": {
+    "c": 1.0357
+   },
+   "absDiffPu": {
+    "c": 0.0031
+   }
+  },
+  {
+   "node": "5",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0318
+   },
+   "simulinkPu": {
+    "c": 1.0354
+   },
+   "absDiffPu": {
+    "c": 0.0036
+   }
+  },
+  {
+   "node": "6",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0311
+   },
+   "simulinkPu": {
+    "c": 1.0352
+   },
+   "absDiffPu": {
+    "c": 0.0041
+   }
+  },
+  {
+   "node": "7",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0218,
+    "b": 1.0395,
+    "c": 1.0291
+   },
+   "simulinkPu": {
+    "a": 1.0242,
+    "b": 1.0398,
+    "c": 1.0303
+   },
+   "absDiffPu": {
+    "a": 0.0024,
+    "b": 0.0003,
+    "c": 0.0012
+   }
+  },
+  {
+   "node": "8",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0158,
+    "b": 1.0382,
+    "c": 1.0253
+   },
+   "simulinkPu": {
+    "a": 1.0186,
+    "b": 1.0377,
+    "c": 1.0262
+   },
+   "absDiffPu": {
+    "a": 0.0028,
+    "b": 0.0005,
+    "c": 0.0009
+   }
+  },
+  {
+   "node": "12",
+   "kind": "bus",
+   "phases": "b",
+   "benchmarkPu": {
+    "b": 1.0379
+   },
+   "simulinkPu": {
+    "b": 1.0376
+   },
+   "absDiffPu": {
+    "b": 0.0003
+   }
+  },
+  {
+   "node": "13",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0079,
+    "b": 1.036,
+    "c": 1.0196
+   },
+   "simulinkPu": {
+    "a": 1.0114,
+    "b": 1.0344,
+    "c": 1.0201
+   },
+   "absDiffPu": {
+    "a": 0.0035,
+    "b": 0.0016,
+    "c": 0.0005
+   }
+  },
+  {
+   "node": "152",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0078,
+    "b": 1.036,
+    "c": 1.0196
+   },
+   "simulinkPu": {
+    "a": 1.0114,
+    "b": 1.0344,
+    "c": 1.0201
+   },
+   "absDiffPu": {
+    "a": 0.0036,
+    "b": 0.0016,
+    "c": 0.0005
+   }
+  },
+  {
+   "node": "52",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0018,
+    "b": 1.0348,
+    "c": 1.0164
+   },
+   "simulinkPu": {
+    "a": 1.006,
+    "b": 1.0322,
+    "c": 1.0164
+   },
+   "absDiffPu": {
+    "a": 0.0042,
+    "b": 0.0026,
+    "c": 0.0
+   }
+  },
+  {
+   "node": "53",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9991,
+    "b": 1.034,
+    "c": 1.0148
+   },
+   "simulinkPu": {
+    "a": 1.0035,
+    "b": 1.031,
+    "c": 1.0146
+   },
+   "absDiffPu": {
+    "a": 0.0044,
+    "b": 0.003,
+    "c": 0.0002
+   }
+  },
+  {
+   "node": "54",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9976,
+    "b": 1.0334,
+    "c": 1.0138
+   },
+   "simulinkPu": {
+    "a": 1.0021,
+    "b": 1.0302,
+    "c": 1.0134
+   },
+   "absDiffPu": {
+    "a": 0.0045,
+    "b": 0.0032,
+    "c": 0.0004
+   }
+  },
+  {
+   "node": "55",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9974,
+    "b": 1.0334,
+    "c": 1.0139
+   },
+   "simulinkPu": {
+    "a": 1.0019,
+    "b": 1.0301,
+    "c": 1.0135
+   },
+   "absDiffPu": {
+    "a": 0.0045,
+    "b": 0.0033,
+    "c": 0.0004
+   }
+  },
+  {
+   "node": "56",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9974,
+    "b": 1.0332,
+    "c": 1.014
+   },
+   "simulinkPu": {
+    "a": 1.0019,
+    "b": 1.0299,
+    "c": 1.0136
+   },
+   "absDiffPu": {
+    "a": 0.0045,
+    "b": 0.0033,
+    "c": 0.0004
+   }
+  },
+  {
+   "node": "57",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9945,
+    "b": 1.0306,
+    "c": 1.0113
+   },
+   "simulinkPu": {
+    "a": 0.9986,
+    "b": 1.0279,
+    "c": 1.0102
+   },
+   "absDiffPu": {
+    "a": 0.0041,
+    "b": 0.0027,
+    "c": 0.0011
+   }
+  },
+  {
+   "node": "58",
+   "kind": "bus",
+   "phases": "b",
+   "benchmarkPu": {
+    "b": 1.03
+   },
+   "simulinkPu": {
+    "b": 1.0277
+   },
+   "absDiffPu": {
+    "b": 0.0023
+   }
+  },
+  {
+   "node": "59",
+   "kind": "bus",
+   "phases": "b",
+   "benchmarkPu": {
+    "b": 1.0296
+   },
+   "simulinkPu": {
+    "b": 1.0277
+   },
+   "absDiffPu": {
+    "b": 0.0019
+   }
+  },
+  {
+   "node": "60",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.988,
+    "b": 1.0256,
+    "c": 1.0052
+   },
+   "simulinkPu": {
+    "a": 0.9912,
+    "b": 1.0243,
+    "c": 1.0029
+   },
+   "absDiffPu": {
+    "a": 0.0032,
+    "b": 0.0013,
+    "c": 0.0023
+   }
+  },
+  {
+   "node": "160",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.988,
+    "b": 1.0256,
+    "c": 1.0052
+   },
+   "simulinkPu": {
+    "a": 0.9912,
+    "b": 1.0243,
+    "c": 1.0029
+   },
+   "absDiffPu": {
+    "a": 0.0032,
+    "b": 0.0013,
+    "c": 0.0023
+   }
+  },
+  {
+   "node": "RG4",
+   "kind": "regulator-terminal",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0374,
+    "b": 1.032,
+    "c": 1.0366
+   },
+   "simulinkPu": {
+    "a": 1.041,
+    "b": 1.0297,
+    "c": 1.0327
+   },
+   "absDiffPu": {
+    "a": 0.0036,
+    "b": 0.0023,
+    "c": 0.0039
+   }
+  },
+  {
+   "node": "67",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0355,
+    "b": 1.0311,
+    "c": 1.0345
+   },
+   "simulinkPu": {
+    "a": 1.041,
+    "b": 1.0297,
+    "c": 1.0327
+   },
+   "absDiffPu": {
+    "a": 0.0055,
+    "b": 0.0014,
+    "c": 0.0018
+   }
+  },
+  {
+   "node": "68",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.034
+   },
+   "simulinkPu": {
+    "a": 1.0405
+   },
+   "absDiffPu": {
+    "a": 0.0065
+   }
+  },
+  {
+   "node": "69",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.0322
+   },
+   "simulinkPu": {
+    "a": 1.0398
+   },
+   "absDiffPu": {
+    "a": 0.0076
+   }
+  },
+  {
+   "node": "70",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.031
+   },
+   "simulinkPu": {
+    "a": 1.0394
+   },
+   "absDiffPu": {
+    "a": 0.0084
+   }
+  },
+  {
+   "node": "71",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.0303
+   },
+   "simulinkPu": {
+    "a": 1.0391
+   },
+   "absDiffPu": {
+    "a": 0.0088
+   }
+  },
+  {
+   "node": "72",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0359,
+    "b": 1.0302,
+    "c": 1.0343
+   },
+   "simulinkPu": {
+    "a": 1.0407,
+    "b": 1.0291,
+    "c": 1.0334
+   },
+   "absDiffPu": {
+    "a": 0.0048,
+    "b": 0.0011,
+    "c": 0.0009
+   }
+  },
+  {
+   "node": "73",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0321
+   },
+   "simulinkPu": {
+    "c": 1.032
+   },
+   "absDiffPu": {
+    "c": 0.0001
+   }
+  },
+  {
+   "node": "74",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0303
+   },
+   "simulinkPu": {
+    "c": 1.0313
+   },
+   "absDiffPu": {
+    "c": 0.001
+   }
+  },
+  {
+   "node": "75",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0293
+   },
+   "simulinkPu": {
+    "c": 1.031
+   },
+   "absDiffPu": {
+    "c": 0.0017
+   }
+  },
+  {
+   "node": "76",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0358,
+    "b": 1.0297,
+    "c": 1.0349
+   },
+   "simulinkPu": {
+    "a": 1.0405,
+    "b": 1.0287,
+    "c": 1.0339
+   },
+   "absDiffPu": {
+    "a": 0.0047,
+    "b": 0.001,
+    "c": 0.001
+   }
+  },
+  {
+   "node": "77",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.037,
+    "b": 1.0308,
+    "c": 1.0358
+   },
+   "simulinkPu": {
+    "a": 1.0415,
+    "b": 1.0297,
+    "c": 1.0349
+   },
+   "absDiffPu": {
+    "a": 0.0045,
+    "b": 0.0011,
+    "c": 0.0009
+   }
+  },
+  {
+   "node": "78",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0373,
+    "b": 1.0312,
+    "c": 1.036
+   },
+   "simulinkPu": {
+    "a": 1.0418,
+    "b": 1.0301,
+    "c": 1.0351
+   },
+   "absDiffPu": {
+    "a": 0.0045,
+    "b": 0.0011,
+    "c": 0.0009
+   }
+  },
+  {
+   "node": "79",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.037,
+    "b": 1.0313,
+    "c": 1.0359
+   },
+   "simulinkPu": {
+    "a": 1.0415,
+    "b": 1.0303,
+    "c": 1.035
+   },
+   "absDiffPu": {
+    "a": 0.0045,
+    "b": 0.001,
+    "c": 0.0009
+   }
+  },
+  {
+   "node": "80",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0394,
+    "b": 1.0329,
+    "c": 1.0368
+   },
+   "simulinkPu": {
+    "a": 1.0437,
+    "b": 1.0317,
+    "c": 1.036
+   },
+   "absDiffPu": {
+    "a": 0.0043,
+    "b": 0.0012,
+    "c": 0.0008
+   }
+  },
+  {
+   "node": "81",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0415,
+    "b": 1.0352,
+    "c": 1.0374
+   },
+   "simulinkPu": {
+    "a": 1.0458,
+    "b": 1.0339,
+    "c": 1.0367
+   },
+   "absDiffPu": {
+    "a": 0.0043,
+    "b": 0.0013,
+    "c": 0.0007
+   }
+  },
+  {
+   "node": "82",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0424,
+    "b": 1.0364,
+    "c": 1.0382
+   },
+   "simulinkPu": {
+    "a": 1.0466,
+    "b": 1.0352,
+    "c": 1.0375
+   },
+   "absDiffPu": {
+    "a": 0.0042,
+    "b": 0.0012,
+    "c": 0.0007
+   }
+  },
+  {
+   "node": "83",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0436,
+    "b": 1.0375,
+    "c": 1.039
+   },
+   "simulinkPu": {
+    "a": 1.0478,
+    "b": 1.0362,
+    "c": 1.0384
+   },
+   "absDiffPu": {
+    "a": 0.0042,
+    "b": 0.0013,
+    "c": 0.0006
+   }
+  },
+  {
+   "node": "84",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0348
+   },
+   "simulinkPu": {
+    "c": 1.0357
+   },
+   "absDiffPu": {
+    "c": 0.0009
+   }
+  },
+  {
+   "node": "85",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0336
+   },
+   "simulinkPu": {
+    "c": 1.0353
+   },
+   "absDiffPu": {
+    "c": 0.0017
+   }
+  },
+  {
+   "node": "86",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0349,
+    "b": 1.0279,
+    "c": 1.0364
+   },
+   "simulinkPu": {
+    "a": 1.0393,
+    "b": 1.0269,
+    "c": 1.0351
+   },
+   "absDiffPu": {
+    "a": 0.0044,
+    "b": 0.001,
+    "c": 0.0013
+   }
+  },
+  {
+   "node": "87",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0342,
+    "b": 1.0272,
+    "c": 1.0369
+   },
+   "simulinkPu": {
+    "a": 1.0387,
+    "b": 1.0261,
+    "c": 1.0357
+   },
+   "absDiffPu": {
+    "a": 0.0045,
+    "b": 0.0011,
+    "c": 0.0012
+   }
+  },
+  {
+   "node": "88",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.0342
+   },
+   "simulinkPu": {
+    "a": 1.0386
+   },
+   "absDiffPu": {
+    "a": 0.0044
+   }
+  },
+  {
+   "node": "89",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0338,
+    "b": 1.027,
+    "c": 1.0373
+   },
+   "simulinkPu": {
+    "a": 1.0382,
+    "b": 1.0259,
+    "c": 1.0361
+   },
+   "absDiffPu": {
+    "a": 0.0044,
+    "b": 0.0011,
+    "c": 0.0012
+   }
+  },
+  {
+   "node": "90",
+   "kind": "bus",
+   "phases": "b",
+   "benchmarkPu": {
+    "b": 1.0269
+   },
+   "simulinkPu": {
+    "b": 1.0259
+   },
+   "absDiffPu": {
+    "b": 0.001
+   }
+  },
+  {
+   "node": "91",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0336,
+    "b": 1.0266,
+    "c": 1.0376
+   },
+   "simulinkPu": {
+    "a": 1.038,
+    "b": 1.0256,
+    "c": 1.0363
+   },
+   "absDiffPu": {
+    "a": 0.0044,
+    "b": 0.001,
+    "c": 0.0013
+   }
+  },
+  {
+   "node": "92",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0375
+   },
+   "simulinkPu": {
+    "c": 1.0363
+   },
+   "absDiffPu": {
+    "c": 0.0012
+   }
+  },
+  {
+   "node": "93",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0333,
+    "b": 1.0265,
+    "c": 1.0377
+   },
+   "simulinkPu": {
+    "a": 1.0376,
+    "b": 1.0254,
+    "c": 1.0365
+   },
+   "absDiffPu": {
+    "a": 0.0043,
+    "b": 0.0011,
+    "c": 0.0012
+   }
+  },
+  {
+   "node": "94",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.0326
+   },
+   "simulinkPu": {
+    "a": 1.0374
+   },
+   "absDiffPu": {
+    "a": 0.0048
+   }
+  },
+  {
+   "node": "95",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0332,
+    "b": 1.0261,
+    "c": 1.0378
+   },
+   "simulinkPu": {
+    "a": 1.0376,
+    "b": 1.025,
+    "c": 1.0367
+   },
+   "absDiffPu": {
+    "a": 0.0044,
+    "b": 0.0011,
+    "c": 0.0011
+   }
+  },
+  {
+   "node": "96",
+   "kind": "bus",
+   "phases": "b",
+   "benchmarkPu": {
+    "b": 1.0258
+   },
+   "simulinkPu": {
+    "b": 1.0249
+   },
+   "absDiffPu": {
+    "b": 0.0009
+   }
+  },
+  {
+   "node": "97",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0345,
+    "b": 1.0306,
+    "c": 1.0338
+   },
+   "simulinkPu": {
+    "a": 1.0395,
+    "b": 1.029,
+    "c": 1.0317
+   },
+   "absDiffPu": {
+    "a": 0.005,
+    "b": 0.0016,
+    "c": 0.0021
+   }
+  },
+  {
+   "node": "197",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0345,
+    "b": 1.0306,
+    "c": 1.0338
+   },
+   "simulinkPu": {
+    "a": 1.0395,
+    "b": 1.029,
+    "c": 1.0317
+   },
+   "absDiffPu": {
+    "a": 0.005,
+    "b": 0.0016,
+    "c": 0.0021
+   }
+  },
+  {
+   "node": "101",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0337,
+    "b": 1.0303,
+    "c": 1.0332
+   },
+   "simulinkPu": {
+    "a": 1.0387,
+    "b": 1.0288,
+    "c": 1.031
+   },
+   "absDiffPu": {
+    "a": 0.005,
+    "b": 0.0015,
+    "c": 0.0022
+   }
+  },
+  {
+   "node": "102",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0318
+   },
+   "simulinkPu": {
+    "c": 1.0298
+   },
+   "absDiffPu": {
+    "c": 0.002
+   }
+  },
+  {
+   "node": "103",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0301
+   },
+   "simulinkPu": {
+    "c": 1.0293
+   },
+   "absDiffPu": {
+    "c": 0.0008
+   }
+  },
+  {
+   "node": "104",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0283
+   },
+   "simulinkPu": {
+    "c": 1.0286
+   },
+   "absDiffPu": {
+    "c": 0.0003
+   }
+  },
+  {
+   "node": "105",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0323,
+    "b": 1.0301,
+    "c": 1.0335
+   },
+   "simulinkPu": {
+    "a": 1.0378,
+    "b": 1.0286,
+    "c": 1.0303
+   },
+   "absDiffPu": {
+    "a": 0.0055,
+    "b": 0.0015,
+    "c": 0.0032
+   }
+  },
+  {
+   "node": "106",
+   "kind": "bus",
+   "phases": "b",
+   "benchmarkPu": {
+    "b": 1.029
+   },
+   "simulinkPu": {
+    "b": 1.0282
+   },
+   "absDiffPu": {
+    "b": 0.0008
+   }
+  },
+  {
+   "node": "107",
+   "kind": "bus",
+   "phases": "b",
+   "benchmarkPu": {
+    "b": 1.0275
+   },
+   "simulinkPu": {
+    "b": 1.0276
+   },
+   "absDiffPu": {
+    "b": 0.0001
+   }
+  },
+  {
+   "node": "108",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0309,
+    "b": 1.0308,
+    "c": 1.0334
+   },
+   "simulinkPu": {
+    "a": 1.0362,
+    "b": 1.0293,
+    "c": 1.0302
+   },
+   "absDiffPu": {
+    "a": 0.0053,
+    "b": 0.0015,
+    "c": 0.0032
+   }
+  },
+  {
+   "node": "109",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.0267
+   },
+   "simulinkPu": {
+    "a": 1.0348
+   },
+   "absDiffPu": {
+    "a": 0.0081
+   }
+  },
+  {
+   "node": "110",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.0248
+   },
+   "simulinkPu": {
+    "a": 1.0341
+   },
+   "absDiffPu": {
+    "a": 0.0093
+   }
+  },
+  {
+   "node": "111",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.024
+   },
+   "simulinkPu": {
+    "a": 1.0338
+   },
+   "absDiffPu": {
+    "a": 0.0098
+   }
+  },
+  {
+   "node": "112",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.0241
+   },
+   "simulinkPu": {
+    "a": 1.0339
+   },
+   "absDiffPu": {
+    "a": 0.0098
+   }
+  },
+  {
+   "node": "113",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.022
+   },
+   "simulinkPu": {
+    "a": 1.0332
+   },
+   "absDiffPu": {
+    "a": 0.0112
+   }
+  },
+  {
+   "node": "114",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.0216
+   },
+   "simulinkPu": {
+    "a": 1.033
+   },
+   "absDiffPu": {
+    "a": 0.0114
+   }
+  },
+  {
+   "node": "300",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0309,
+    "b": 1.0308,
+    "c": 1.0334
+   },
+   "simulinkPu": {
+    "a": 1.0362,
+    "b": 1.0293,
+    "c": 1.0302
+   },
+   "absDiffPu": {
+    "a": 0.0053,
+    "b": 0.0015,
+    "c": 0.0032
+   }
+  },
+  {
+   "node": "98",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0343,
+    "b": 1.0303,
+    "c": 1.0336
+   },
+   "simulinkPu": {
+    "a": 1.0393,
+    "b": 1.0287,
+    "c": 1.0314
+   },
+   "absDiffPu": {
+    "a": 0.005,
+    "b": 0.0016,
+    "c": 0.0022
+   }
+  },
+  {
+   "node": "99",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0346,
+    "b": 1.0295,
+    "c": 1.0332
+   },
+   "simulinkPu": {
+    "a": 1.0396,
+    "b": 1.0279,
+    "c": 1.0311
+   },
+   "absDiffPu": {
+    "a": 0.005,
+    "b": 0.0016,
+    "c": 0.0021
+   }
+  },
+  {
+   "node": "100",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0348,
+    "b": 1.0294,
+    "c": 1.0328
+   },
+   "simulinkPu": {
+    "a": 1.0398,
+    "b": 1.0279,
+    "c": 1.0307
+   },
+   "absDiffPu": {
+    "a": 0.005,
+    "b": 0.0015,
+    "c": 0.0021
+   }
+  },
+  {
+   "node": "450",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 1.0348,
+    "b": 1.0294,
+    "c": 1.0328
+   },
+   "simulinkPu": {
+    "a": 1.0398,
+    "b": 1.0279,
+    "c": 1.0307
+   },
+   "absDiffPu": {
+    "a": 0.005,
+    "b": 0.0015,
+    "c": 0.0021
+   }
+  },
+  {
+   "node": "61",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.988,
+    "b": 1.0256,
+    "c": 1.0052
+   },
+   "simulinkPu": {
+    "a": 0.9912,
+    "b": 1.0243,
+    "c": 1.0029
+   },
+   "absDiffPu": {
+    "a": 0.0032,
+    "b": 0.0013,
+    "c": 0.0023
+   }
+  },
+  {
+   "node": "XF1",
+   "kind": "transformer-terminal",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.988,
+    "b": 1.0256,
+    "c": 1.0052
+   },
+   "simulinkPu": {
+    "a": 0.9912,
+    "b": 1.0243,
+    "c": 1.0029
+   },
+   "absDiffPu": {
+    "a": 0.0032,
+    "b": 0.0013,
+    "c": 0.0023
+   }
+  },
+  {
+   "node": "610",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.988,
+    "b": 1.0256,
+    "c": 1.0052
+   },
+   "simulinkPu": {
+    "a": 1.0005,
+    "b": 1.0138,
+    "c": 1.0037
+   },
+   "absDiffPu": {
+    "a": 0.0125,
+    "b": 0.0118,
+    "c": 0.0015
+   }
+  },
+  {
+   "node": "62",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9872,
+    "b": 1.0245,
+    "c": 1.0032
+   },
+   "simulinkPu": {
+    "a": 0.9905,
+    "b": 1.0231,
+    "c": 1.0009
+   },
+   "absDiffPu": {
+    "a": 0.0033,
+    "b": 0.0014,
+    "c": 0.0023
+   }
+  },
+  {
+   "node": "63",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9866,
+    "b": 1.0236,
+    "c": 1.0022
+   },
+   "simulinkPu": {
+    "a": 0.9899,
+    "b": 1.0222,
+    "c": 0.9999
+   },
+   "absDiffPu": {
+    "a": 0.0033,
+    "b": 0.0014,
+    "c": 0.0023
+   }
+  },
+  {
+   "node": "64",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9863,
+    "b": 1.0217,
+    "c": 1.0
+   },
+   "simulinkPu": {
+    "a": 0.9897,
+    "b": 1.0203,
+    "c": 0.9977
+   },
+   "absDiffPu": {
+    "a": 0.0034,
+    "b": 0.0014,
+    "c": 0.0023
+   }
+  },
+  {
+   "node": "65",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9856,
+    "b": 1.0214,
+    "c": 0.997
+   },
+   "simulinkPu": {
+    "a": 0.9891,
+    "b": 1.0199,
+    "c": 0.9948
+   },
+   "absDiffPu": {
+    "a": 0.0035,
+    "b": 0.0015,
+    "c": 0.0022
+   }
+  },
+  {
+   "node": "66",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9858,
+    "b": 1.0216,
+    "c": 0.9955
+   },
+   "simulinkPu": {
+    "a": 0.9894,
+    "b": 1.0201,
+    "c": 0.9933
+   },
+   "absDiffPu": {
+    "a": 0.0036,
+    "b": 0.0015,
+    "c": 0.0022
+   }
+  },
+  {
+   "node": "18",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9988,
+    "b": 1.0319,
+    "c": 1.0122
+   },
+   "simulinkPu": {
+    "a": 1.0017,
+    "b": 1.03,
+    "c": 1.0137
+   },
+   "absDiffPu": {
+    "a": 0.0029,
+    "b": 0.0019,
+    "c": 0.0015
+   }
+  },
+  {
+   "node": "135",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9988,
+    "b": 1.0318,
+    "c": 1.0122
+   },
+   "simulinkPu": {
+    "a": 1.0017,
+    "b": 1.03,
+    "c": 1.0137
+   },
+   "absDiffPu": {
+    "a": 0.0029,
+    "b": 0.0018,
+    "c": 0.0015
+   }
+  },
+  {
+   "node": "35",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.996,
+    "b": 1.0293,
+    "c": 1.0112
+   },
+   "simulinkPu": {
+    "a": 0.9991,
+    "b": 1.0275,
+    "c": 1.0123
+   },
+   "absDiffPu": {
+    "a": 0.0031,
+    "b": 0.0018,
+    "c": 0.0011
+   }
+  },
+  {
+   "node": "36",
+   "kind": "bus",
+   "phases": "ab",
+   "benchmarkPu": {
+    "a": 0.9951,
+    "b": 1.0288
+   },
+   "simulinkPu": {
+    "a": 0.9981,
+    "b": 1.027
+   },
+   "absDiffPu": {
+    "a": 0.003,
+    "b": 0.0018
+   }
+  },
+  {
+   "node": "37",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 0.9943
+   },
+   "simulinkPu": {
+    "a": 0.9979
+   },
+   "absDiffPu": {
+    "a": 0.0036
+   }
+  },
+  {
+   "node": "38",
+   "kind": "bus",
+   "phases": "b",
+   "benchmarkPu": {
+    "b": 1.0282
+   },
+   "simulinkPu": {
+    "b": 1.0267
+   },
+   "absDiffPu": {
+    "b": 0.0015
+   }
+  },
+  {
+   "node": "39",
+   "kind": "bus",
+   "phases": "b",
+   "benchmarkPu": {
+    "b": 1.0278
+   },
+   "simulinkPu": {
+    "b": 1.0266
+   },
+   "absDiffPu": {
+    "b": 0.0012
+   }
+  },
+  {
+   "node": "40",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9945,
+    "b": 1.0282,
+    "c": 1.0101
+   },
+   "simulinkPu": {
+    "a": 0.9978,
+    "b": 1.0261,
+    "c": 1.0112
+   },
+   "absDiffPu": {
+    "a": 0.0033,
+    "b": 0.0021,
+    "c": 0.0011
+   }
+  },
+  {
+   "node": "41",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0097
+   },
+   "simulinkPu": {
+    "c": 1.0111
+   },
+   "absDiffPu": {
+    "c": 0.0014
+   }
+  },
+  {
+   "node": "42",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9929,
+    "b": 1.027,
+    "c": 1.0092
+   },
+   "simulinkPu": {
+    "a": 0.9963,
+    "b": 1.0248,
+    "c": 1.0103
+   },
+   "absDiffPu": {
+    "a": 0.0034,
+    "b": 0.0022,
+    "c": 0.0011
+   }
+  },
+  {
+   "node": "43",
+   "kind": "bus",
+   "phases": "b",
+   "benchmarkPu": {
+    "b": 1.0257
+   },
+   "simulinkPu": {
+    "b": 1.0243
+   },
+   "absDiffPu": {
+    "b": 0.0014
+   }
+  },
+  {
+   "node": "44",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9918,
+    "b": 1.0263,
+    "c": 1.0084
+   },
+   "simulinkPu": {
+    "a": 0.9954,
+    "b": 1.0239,
+    "c": 1.0095
+   },
+   "absDiffPu": {
+    "a": 0.0036,
+    "b": 0.0024,
+    "c": 0.0011
+   }
+  },
+  {
+   "node": "45",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 0.9913
+   },
+   "simulinkPu": {
+    "a": 0.9952
+   },
+   "absDiffPu": {
+    "a": 0.0039
+   }
+  },
+  {
+   "node": "46",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 0.9909
+   },
+   "simulinkPu": {
+    "a": 0.9951
+   },
+   "absDiffPu": {
+    "a": 0.0042
+   }
+  },
+  {
+   "node": "47",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9908,
+    "b": 1.0253,
+    "c": 1.0074
+   },
+   "simulinkPu": {
+    "a": 0.9942,
+    "b": 1.0222,
+    "c": 1.0082
+   },
+   "absDiffPu": {
+    "a": 0.0034,
+    "b": 0.0031,
+    "c": 0.0008
+   }
+  },
+  {
+   "node": "48",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9905,
+    "b": 1.025,
+    "c": 1.0072
+   },
+   "simulinkPu": {
+    "a": 0.9945,
+    "b": 1.0227,
+    "c": 1.0085
+   },
+   "absDiffPu": {
+    "a": 0.004,
+    "b": 0.0023,
+    "c": 0.0013
+   }
+  },
+  {
+   "node": "49",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9905,
+    "b": 1.0247,
+    "c": 1.0071
+   },
+   "simulinkPu": {
+    "a": 0.994,
+    "b": 1.0216,
+    "c": 1.0078
+   },
+   "absDiffPu": {
+    "a": 0.0035,
+    "b": 0.0031,
+    "c": 0.0007
+   }
+  },
+  {
+   "node": "50",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9905,
+    "b": 1.0247,
+    "c": 1.0067
+   },
+   "simulinkPu": {
+    "a": 0.994,
+    "b": 1.0217,
+    "c": 1.0075
+   },
+   "absDiffPu": {
+    "a": 0.0035,
+    "b": 0.003,
+    "c": 0.0008
+   }
+  },
+  {
+   "node": "51",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9903,
+    "b": 1.0248,
+    "c": 1.0067
+   },
+   "simulinkPu": {
+    "a": 0.9938,
+    "b": 1.0218,
+    "c": 1.0074
+   },
+   "absDiffPu": {
+    "a": 0.0035,
+    "b": 0.003,
+    "c": 0.0007
+   }
+  },
+  {
+   "node": "151",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9903,
+    "b": 1.0248,
+    "c": 1.0067
+   },
+   "simulinkPu": {
+    "a": 0.9938,
+    "b": 1.0218,
+    "c": 1.0074
+   },
+   "absDiffPu": {
+    "a": 0.0035,
+    "b": 0.003,
+    "c": 0.0007
+   }
+  },
+  {
+   "node": "19",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 0.9975
+   },
+   "simulinkPu": {
+    "a": 1.0013
+   },
+   "absDiffPu": {
+    "a": 0.0038
+   }
+  },
+  {
+   "node": "20",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 0.9967
+   },
+   "simulinkPu": {
+    "a": 1.001
+   },
+   "absDiffPu": {
+    "a": 0.0043
+   }
+  },
+  {
+   "node": "21",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9983,
+    "b": 1.032,
+    "c": 1.0111
+   },
+   "simulinkPu": {
+    "a": 1.0011,
+    "b": 1.03,
+    "c": 1.0126
+   },
+   "absDiffPu": {
+    "a": 0.0028,
+    "b": 0.002,
+    "c": 0.0015
+   }
+  },
+  {
+   "node": "22",
+   "kind": "bus",
+   "phases": "b",
+   "benchmarkPu": {
+    "b": 1.0305
+   },
+   "simulinkPu": {
+    "b": 1.0295
+   },
+   "absDiffPu": {
+    "b": 0.001
+   }
+  },
+  {
+   "node": "23",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9979,
+    "b": 1.0323,
+    "c": 1.01
+   },
+   "simulinkPu": {
+    "a": 1.0006,
+    "b": 1.0304,
+    "c": 1.0115
+   },
+   "absDiffPu": {
+    "a": 0.0027,
+    "b": 0.0019,
+    "c": 0.0015
+   }
+  },
+  {
+   "node": "24",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0085
+   },
+   "simulinkPu": {
+    "c": 1.011
+   },
+   "absDiffPu": {
+    "c": 0.0025
+   }
+  },
+  {
+   "node": "25",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9972,
+    "b": 1.0328,
+    "c": 1.0091
+   },
+   "simulinkPu": {
+    "a": 0.9999,
+    "b": 1.0308,
+    "c": 1.0106
+   },
+   "absDiffPu": {
+    "a": 0.0027,
+    "b": 0.002,
+    "c": 0.0015
+   }
+  },
+  {
+   "node": "28",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9968,
+    "b": 1.033,
+    "c": 1.0087
+   },
+   "simulinkPu": {
+    "a": 0.9995,
+    "b": 1.0311,
+    "c": 1.0103
+   },
+   "absDiffPu": {
+    "a": 0.0027,
+    "b": 0.0019,
+    "c": 0.0016
+   }
+  },
+  {
+   "node": "29",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9967,
+    "b": 1.0332,
+    "c": 1.0083
+   },
+   "simulinkPu": {
+    "a": 0.9993,
+    "b": 1.0312,
+    "c": 1.0099
+   },
+   "absDiffPu": {
+    "a": 0.0026,
+    "b": 0.002,
+    "c": 0.0016
+   }
+  },
+  {
+   "node": "30",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9969,
+    "b": 1.0331,
+    "c": 1.0078
+   },
+   "simulinkPu": {
+    "a": 0.9995,
+    "b": 1.0311,
+    "c": 1.0094
+   },
+   "absDiffPu": {
+    "a": 0.0026,
+    "b": 0.002,
+    "c": 0.0016
+   }
+  },
+  {
+   "node": "250",
+   "kind": "bus",
+   "phases": "abc",
+   "benchmarkPu": {
+    "a": 0.9969,
+    "b": 1.0331,
+    "c": 1.0078
+   },
+   "simulinkPu": {
+    "a": 0.9995,
+    "b": 1.0311,
+    "c": 1.0094
+   },
+   "absDiffPu": {
+    "a": 0.0026,
+    "b": 0.002,
+    "c": 0.0016
+   }
+  },
+  {
+   "node": "RG3",
+   "kind": "regulator-terminal",
+   "phases": "ac",
+   "benchmarkPu": {
+    "a": 0.9972,
+    "c": 1.0028
+   },
+   "simulinkPu": {
+    "a": 0.9999,
+    "c": 1.0044
+   },
+   "absDiffPu": {
+    "a": 0.0027,
+    "c": 0.0016
+   }
+  },
+  {
+   "node": "26",
+   "kind": "bus",
+   "phases": "ac",
+   "benchmarkPu": {
+    "a": 0.997,
+    "c": 1.0023
+   },
+   "simulinkPu": {
+    "a": 0.9996,
+    "c": 1.0039
+   },
+   "absDiffPu": {
+    "a": 0.0026,
+    "c": 0.0016
+   }
+  },
+  {
+   "node": "27",
+   "kind": "bus",
+   "phases": "ac",
+   "benchmarkPu": {
+    "a": 0.9966,
+    "c": 1.0022
+   },
+   "simulinkPu": {
+    "a": 0.9993,
+    "c": 1.0038
+   },
+   "absDiffPu": {
+    "a": 0.0027,
+    "c": 0.0016
+   }
+  },
+  {
+   "node": "33",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 0.9953
+   },
+   "simulinkPu": {
+    "a": 0.9988
+   },
+   "absDiffPu": {
+    "a": 0.0035
+   }
+  },
+  {
+   "node": "31",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0017
+   },
+   "simulinkPu": {
+    "c": 1.0037
+   },
+   "absDiffPu": {
+    "c": 0.002
+   }
+  },
+  {
+   "node": "32",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0013
+   },
+   "simulinkPu": {
+    "c": 1.0035
+   },
+   "absDiffPu": {
+    "c": 0.0022
+   }
+  },
+  {
+   "node": "34",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0187
+   },
+   "simulinkPu": {
+    "c": 1.0197
+   },
+   "absDiffPu": {
+    "c": 0.001
+   }
+  },
+  {
+   "node": "15",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0183
+   },
+   "simulinkPu": {
+    "c": 1.0196
+   },
+   "absDiffPu": {
+    "c": 0.0013
+   }
+  },
+  {
+   "node": "16",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0173
+   },
+   "simulinkPu": {
+    "c": 1.0193
+   },
+   "absDiffPu": {
+    "c": 0.002
+   }
+  },
+  {
+   "node": "17",
+   "kind": "bus",
+   "phases": "c",
+   "benchmarkPu": {
+    "c": 1.0178
+   },
+   "simulinkPu": {
+    "c": 1.0194
+   },
+   "absDiffPu": {
+    "c": 0.0016
+   }
+  },
+  {
+   "node": "9",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.0144
+   },
+   "simulinkPu": {
+    "a": 1.0182
+   },
+   "absDiffPu": {
+    "a": 0.0038
+   }
+  },
+  {
+   "node": "RG2",
+   "kind": "regulator-terminal",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.008
+   },
+   "simulinkPu": {
+    "a": 1.005
+   },
+   "absDiffPu": {
+    "a": 0.003
+   }
+  },
+  {
+   "node": "14",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.0063
+   },
+   "simulinkPu": {
+    "a": 1.005
+   },
+   "absDiffPu": {
+    "a": 0.0013
+   }
+  },
+  {
+   "node": "10",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.006
+   },
+   "simulinkPu": {
+    "a": 1.0049
+   },
+   "absDiffPu": {
+    "a": 0.0011
+   }
+  },
+  {
+   "node": "11",
+   "kind": "bus",
+   "phases": "a",
+   "benchmarkPu": {
+    "a": 1.0057
+   },
+   "simulinkPu": {
+    "a": 1.0048
+   },
+   "absDiffPu": {
+    "a": 0.0009
+   }
+  }
+ ]
+}
